@@ -11,7 +11,7 @@ mkdir -p "$TARGET_DIR"
 
 # 下載該板子所需的關鍵配置文件
 # 通常包含：board.h, board.mk, kernel-3.4.x.config, partitions.config
-files=("board.h" "board.mk" "kernel-3.4.x.config" "partitions.config", "SingleSKU.dat")
+files=("board.h" "board.mk" "kernel-3.4.x.config" "partitions.config" "SingleSKU.dat")
 
 for file in "${files[@]}"; do
     wget -q "$SOURCE_URL/$BOARD_NAME/$file" -O "$TARGET_DIR/$file"
